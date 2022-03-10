@@ -21,9 +21,9 @@ module.exports = {
     // Create a thought
     createThought({ body }, res) {
         Thought.create(body)
-            .then((newThought) => res.json(newThought))
+            .then((thought) => res.json(thought))
             .catch((err) => res.status(500).json(err));
-
+    },
 
         //Update thought
         updateThought(req, res) {
